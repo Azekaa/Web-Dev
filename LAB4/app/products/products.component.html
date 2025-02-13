@@ -1,0 +1,12 @@
+<div *ngFor="let product of products" class="product-card">
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <strong>Rating: {{ product.rating }} ⭐</strong>
+
+  <div class="gallery">
+    <img *ngFor="let img of product.images" [src]="img" height="200px" width="200px">
+  </div>
+
+  <button (click)="share(product.link)">Share</button>
+  <button (click) = "openKaspi(product.link)">Buy in Kaspi</button>
+</div>
